@@ -16,9 +16,11 @@ public class DataDrivnTestXL {
 @Test 
  public void data()throws EncryptedDocumentException, IOException {
 	FileInputStream fis= new FileInputStream("./Data.xlsx");
+	//FileInputStream fis= new FileInputStream("./src/test/resources/Acti.xlsx");
+
 	Workbook wb =WorkbookFactory.create(fis);
 	Sheet sheet = wb.getSheet("Sheet1");
-	Row row = sheet.getRow(4);
+	Row row = sheet.getRow(1);
 	Cell cell = row.getCell(1);
 	//System.out.println(cell);
 	//System.out.println(cell.getBooleanCellValue());//boolean will print
